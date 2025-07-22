@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachrichtenportal</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="index.html" class="logo-link" aria-label="Nachrichtenportal - Zur Startseite">
+                    <img src="assets/icons/logo.svg" alt="Nachrichtenportal Logo" class="logo">
+                </a>
+                <h1>Nachrichtenportal</h1>
+            </div>
+            
+            <nav class="main-nav" aria-label="Hauptnavigation">
+                <ul class="nav-level-1" role="menubar" aria-label="Hauptmenü">
+                    <li role="none">
+                        <div class="menu-item-container">
+                            <a href="politik.html" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-controls="politik-submenu" tabindex="0">Politik</a>
+                            <button class="submenu-toggle" aria-label="Politik Untermenü öffnen" aria-expanded="false" aria-controls="politik-submenu" tabindex="0">▼</button>
+                        </div>
+                        <ul class="nav-level-2" id="politik-submenu" role="menu" aria-label="Politik Untermenü">
+                            <li role="none"><a href="bundespolitik.html" role="menuitem" tabindex="0">Bundespolitik</a></li>
+                            <li role="none"><a href="landespolitik.html" role="menuitem" tabindex="0">Landespolitik</a></li>
+                        </ul>
+                    </li>
+                    <li role="none">
+                        <div class="menu-item-container">
+                            <a href="wirtschaft.html" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-controls="wirtschaft-submenu" tabindex="0">Wirtschaft</a>
+                            <button class="submenu-toggle" aria-label="Wirtschaft Untermenü öffnen" aria-expanded="false" aria-controls="wirtschaft-submenu" tabindex="0">▼</button>
+                        </div>
+                        <ul class="nav-level-2" id="wirtschaft-submenu" role="menu" aria-label="Wirtschaft Untermenü">
+                            <li role="none"><a href="boerse.html" role="menuitem" tabindex="0">Börse</a></li>
+                            <li role="none"><a href="unternehmen.html" role="menuitem" tabindex="0">Unternehmen</a></li>
+                        </ul>
+                    </li>
+                    <li role="none">
+                        <div class="menu-item-container">
+                            <a href="sport.html" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-controls="sport-submenu" tabindex="0">Sport</a>
+                            <button class="submenu-toggle" aria-label="Sport Untermenü öffnen" aria-expanded="false" aria-controls="sport-submenu" tabindex="0">▼</button>
+                        </div>
+                        <ul class="nav-level-2" id="sport-submenu" role="menu" aria-label="Sport Untermenü">
+                            <li role="none"><a href="fussball.html" role="menuitem" tabindex="0">Fußball</a></li>
+                            <li role="none"><a href="olympia.html" role="menuitem" tabindex="0">Olympia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <form class="search-form" role="search" aria-label="Website durchsuchen">
+                <label for="search-input" class="search-label">Suche:</label>
+                <input type="search" id="search-input" placeholder="Suchen..." aria-describedby="search-description" autocomplete="off">
+                <button type="submit">Suchen</button>
+                <div id="search-description" class="visually-hidden">Geben Sie Suchbegriffe ein und drücken Sie Enter oder klicken Sie auf Suchen</div>
+            </form>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="content-wrapper">
+            <section class="news-section">
+                <article class="news-item">
+                    <h2><a href="artikel1.html">Wichtige Nachricht des Tages</a></h2>
+                    <img src="assets/images/test.png" alt="Bild zur Nachricht: Wichtige Nachricht des Tages" class="news-image">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="artikel1.html" class="read-more">Weiterlesen →</a>
+                </article>
+
+                <article class="news-item">
+                    <h2><a href="artikel2.html">Zweite wichtige Nachricht</a></h2>
+                    <img src="assets/images/test.png" alt="Bild zur Nachricht: Zweite wichtige Nachricht" class="news-image">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a href="artikel2.html" class="read-more">Weiterlesen →</a>
+                </article>
+            </section>
+
+            <aside class="contact-form" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Kontaktformular</h2>
+                <form aria-labelledby="contact-heading" aria-label="Kontaktformular senden">
+                    <fieldset>
+                        <legend>Persönliche Daten</legend>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="text" id="name" name="name" required aria-describedby="name-description" autocomplete="name">
+                            <div id="name-description" class="visually-hidden">Geben Sie Ihren vollständigen Namen ein</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-Mail:</label>
+                            <input type="email" id="email" name="email" required aria-describedby="email-description" autocomplete="email">
+                            <div id="email-description" class="visually-hidden">Geben Sie eine gültige E-Mail-Adresse ein</div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Nachricht</legend>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Nachricht:</label>
+                            <textarea id="message" name="message" rows="4" required aria-describedby="message-description" aria-labelledby="message-label" autocomplete="off"></textarea>
+                            <div id="message-description" class="visually-hidden">Geben Sie Ihre Nachricht ein (mindestens 10 Zeichen)</div>
+                            <div id="message-label" class="visually-hidden">Nachricht</div>
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit">Senden</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Nachrichtenportal. Alle Rechte vorbehalten.</p>
+            <nav class="meta-nav" aria-label="Rechtliche Informationen">
+                <ul>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
